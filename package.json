@@ -5,7 +5,28 @@
   "repository": "git@github.com:vianaz/20-RepoProvas.git",
   "author": "Gabriel Viana Boaes <viana_gab2001@hotmail.com>",
   "license": "MIT",
+  "scripts": {
+    "buid": "tsc",
+    "start": "node build/server.js",
+    "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules --exit-child --cls --rs -r dotenv/config -r tsconfig-paths/register src/server.ts",
+    "test": "jest"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "4.1.0",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "prisma": "^4.1.0",
+    "ts-node": "^10.9.1"
+  },
   "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^28.1.6",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
     "dotenv": "^16.0.1",
@@ -15,17 +36,7 @@
     "supertest": "^6.2.4",
     "ts-jest": "^28.0.7",
     "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.0.0",
     "typescript": "^4.7.4"
-  },
-  "scripts": {
-    "buid": "tsc",
-    "start": "node build/server.js",
-    "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules --exit-child --cls --rs -r dotenv/config -r tsconfig-paths/register src/server.ts",
-    "test": "jest"
-  },
-  "dependencies": {
-    "bcrypt": "^5.0.1",
-    "jsonwebtoken": "^8.5.1",
-    "prisma": "^4.1.0"
   }
 }

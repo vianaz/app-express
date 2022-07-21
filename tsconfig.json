@@ -3,8 +3,8 @@
     "esModuleInterop": true,
     "module": "CommonJS",
     "moduleResolution": "node",
-    "outDir": "build",
-    "rootDir": "src",
+    "outDir": "./build",
+    "rootDir": "./src",
     "target": "ES2016",
     "baseUrl": "./src/",
     "paths": {

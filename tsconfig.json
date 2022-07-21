@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "outDir": "build",
+    "rootDir": "src",
+    "target": "ES2016",
+    "baseUrl": "./src/",
+    "paths": {
+      "@schemas/*": ["schemas/*"],
+      "@db/*": ["db/*"],
+      "@routers/*": ["routers/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@controllers/*": ["controllers/*"],
+      "@services/*": ["services/*"],
+      "@utils/*": ["utils/*"],
+      "@types/*": ["types/*"],
+      "@repositories": ["repositories/*"],
+      "@types": ["types/*"]
+    }
+  },
+  "ts-node": {
+    "esm": true
+  }
+}

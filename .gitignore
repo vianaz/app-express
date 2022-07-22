@@ -3,6 +3,6 @@ node_modules
 build
 
 .env
-.yarn.lock
+yarn.lock
 
 

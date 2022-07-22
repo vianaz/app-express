@@ -1,25 +1,10 @@
-import express, { Application } from "express";
-import cors from "cors";
-import { NameRouter } from "@routers/router";
+import express from "express"
+import cors from "cors"
+import router from "@/routes"
 
-export class App {
-  public app: Application;
+const app = express()
+app.use(cors)
+app.use(express.json())
+app.use(router)
 
-  constructor() {
-    this.app = express();
-
-    this.middleware();
-    this.buildRouter();
-  }
-
-  private middleware() {
-    this.app.use(express.json());
-    this.app.use(cors());
-  }
-
-  private buildRouter() {
-    const { app } = this;
-
-    app.use(new NameRouter().nameRouter);
-  }
-}
+export default app

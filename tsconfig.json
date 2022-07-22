@@ -5,22 +5,25 @@
     "moduleResolution": "node",
     "outDir": "./build",
     "rootDir": "./src",
-    "target": "ES2016",
+    "target": "ES2017",
     "baseUrl": "./src/",
     "paths": {
+      "@/*": ["*"],
       "@schemas/*": ["schemas/*"],
       "@db/*": ["db/*"],
-      "@routers/*": ["routers/*"],
+      "@routes/*": ["routes/*"],
       "@middlewares/*": ["middlewares/*"],
       "@controllers/*": ["controllers/*"],
       "@services/*": ["services/*"],
       "@utils/*": ["utils/*"],
-      "@types/*": ["types/*"],
-      "@repositories": ["repositories/*"],
-      "@types": ["types/*"]
+      "@interfaces/*": ["interfaces/*"],
+      "@repositories": ["repositories/*"]
     }
   },
   "ts-node": {
     "esm": true
-  }
+  },
+  "include": [
+    "src/**/*"
+  ]
 }

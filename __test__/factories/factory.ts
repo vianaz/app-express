@@ -1,1 +1,0 @@
-function nameFactory(params: type) {}

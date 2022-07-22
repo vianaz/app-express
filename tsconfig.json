@@ -4,7 +4,6 @@
     "module": "CommonJS",
     "moduleResolution": "node",
     "outDir": "./build",
-    "rootDir": "./src",
     "target": "ES2017",
     "baseUrl": "./src/",
     "paths": {
@@ -24,6 +23,7 @@
     "esm": true
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "tests/**/*"
   ]
 }

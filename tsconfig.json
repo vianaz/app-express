@@ -8,16 +8,17 @@
     "target": "ES2016",
     "baseUrl": "./src/",
     "paths": {
-      "@schemas/*": ["schemas/*"],
-      "@db/*": ["db/*"],
-      "@routers/*": ["routers/*"],
-      "@middlewares/*": ["middlewares/*"],
       "@controllers/*": ["controllers/*"],
+      "@db/*": ["db/*"],
+      "@errors/*": ["errors/*"],
+      "@factories/*": ["factories/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@schemas/*": ["models/schemas*"],
+      "@types/*": ["models/types/*"],
+      "@repositories/*": ["repositories/*"],
+      "@routers/*": ["routers/*"],
       "@services/*": ["services/*"],
-      "@utils/*": ["utils/*"],
-      "@types/*": ["types/*"],
-      "@repositories": ["repositories/*"],
-      "@types": ["types/*"]
+      "@utils/*": ["utils/*"]
     }
   },
   "ts-node": {

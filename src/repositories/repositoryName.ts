@@ -1,4 +1,4 @@
-import { NameFactory } from "factories/factory";
+import { NameFactory } from "@factories/factoryName";
 
 export class NameRepository {
   static getTableName(table: string) {

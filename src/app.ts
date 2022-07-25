@@ -1,6 +1,6 @@
 import express, { Application } from "express";
 import cors from "cors";
-import { NameRouter } from "@routers/router";
+import { NameRouter } from "@routers/routerName";
 
 export class App {
   public app: Application;

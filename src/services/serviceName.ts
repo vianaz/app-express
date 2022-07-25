@@ -1,4 +1,4 @@
-import { NameRepository } from "respositories/repository";
+import { NameRepository } from "@repositories/repositoryName";
 
 export class NameService {
   static getName() {

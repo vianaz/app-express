@@ -1,4 +1,4 @@
-import { NameController } from "@controllers/controller";
+import { NameController } from "@controllers/controllerName";
 import { Router } from "express";
 
 export class NameRouter {

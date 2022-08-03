@@ -16,7 +16,7 @@
       "@schemas/*": ["./src/models/*"],
       "@types/*": ["./src/models/*"],
       "@repositories/*": ["./src/repositories/*"],
-      "@tests/factories/*": ["./__test__/factories/*"]
+      "@tests/factories/*": ["tests/factories/*"]
     }
   },
   "ts-node": {

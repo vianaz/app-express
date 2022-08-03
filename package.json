@@ -9,9 +9,14 @@
     "start": "node build/server.js",
     "build": "babel src --extensions '.js,.ts' --out-dir build --no-copy-ignored",
     "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules --exit-child --cls --rs -r dotenv/config -r tsconfig-paths/register src/server.ts",
-    "prisma deploy": "dotenv -e .env.production prisma migrate deploy",
-    "prisma seed deploy": "dotenv -e .env.production prisma db seed",
-    "test": "clear && dotenv -e .env.test jest --i --verbose"
+    "prisma:dev": "prisma migrate dev",
+    "prisma:reset": "prisma migrate reset --force",
+    "prisma:deploy": "dotenv -e .env.production prisma migrate deploy",
+    "prisma:seed:deploy": "dotenv -e .env.production prisma db seed",
+    "test": "clear && jest --i --verbose",
+    "test:watch": "clear && jest --i --verbose --watchAll",
+    "test:unit": "clear && jest --verbose --i --testPathPattern=tests/unit",
+    "test:integration": "clear && jest --i --verbose --testPathPattern=tests/integration"
   },
   "prisma": {
     "seed": "ts-node -r tsconfig-paths/register prisma/seed.ts"

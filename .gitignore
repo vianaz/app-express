@@ -1,9 +1,12 @@
 node_modules
-# Keep environment variables out of version control
 
+#env files
 .env
 
+#log
 .yarn.lock
 package-lock.json
 
+#build
 build
+dist

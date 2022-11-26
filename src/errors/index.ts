@@ -1,22 +1,9 @@
-const unauthorizedError = (message: string) => {
-	return {
-		status: 401,
-		message,
+class AppError extends Error {
+	public readonly message: string
+	public readonly statusCode: number
+	constructor(message: string, statusCode = 400) {
+		super(message)
+		this.message = message
+		this.statusCode = statusCode
 	}
 }
-
-const conflictError = (message: string) => {
-	return {
-		status: 409,
-		message,
-	}
-}
-
-const notFoundError = (message: string) => {
-	return {
-		status: 404,
-		message,
-	}
-}
-
-export { unauthorizedError, conflictError, notFoundError }

@@ -1,9 +1,18 @@
-import { NextFunction, Request, Response } from "express"
+import { Request, Response, NextFunction } from "express"
 
-const handleError = (err: AppError | Error, req: Request, res: Response, next: NextFunction) => {
+import { AppError } from "@/errors"
+
+const handleError = (
+	err: AppError | any,
+	req: Request,
+	res: Response,
+	next: NextFunction
+) => {
 	console.error(err)
-	if (err instanceof AppError) return res.status(err.statusCode).send(err.message)
-	return res.status(500).send({ message: "Internal server error" })
+
+	err instanceof AppError
+		? res.status(err.code).send({ error: { message: err.message } })
+		: res.status(500).send("Internal server error")
 }
 
 export default handleError

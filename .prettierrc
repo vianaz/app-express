@@ -1,0 +1,15 @@
+{
+	"bracketSpacing": true,
+	"endOfLine": "lf",
+	"bracketSameLine": false,
+	"printWidth": 80,
+	"proseWrap": "preserve",
+	"quoteProps": "as-needed",
+	"requirePragma": false,
+	"semi": false,
+	"singleQuote": false,
+	"tabWidth": 4,
+	"trailingComma": "es5",
+	"useTabs": true,
+	"vueIndentScriptAndStyle": false
+}
